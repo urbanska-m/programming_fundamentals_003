@@ -36,4 +36,17 @@ describe("catalogueService", () => {
       expect(catalogueService.getQuantity("The Hobbit")).toBe("Sorry, we don't stock that book.");
     });
   });
+
+  describe("catalogueService.getBooksByAuthor", () => {
+    test("return array of books by given author", () => {
+      expect(catalogueService.getBooksByAuthor("Robert Bolaño")).toEqual([
+        { title: "2666", author: "Robert Bolaño", quantity: 17 },
+        { title: "By Night In Chile", author: "Robert Bolaño", quantity: 8 }
+      ]);
+      expect(catalogueService.getBooksByAuthor("Sally Rooney")).toEqual([
+        { title: "Conversations With Friends", author: "Sally Rooney", quantity: 1},
+        { title: "Normal People", author: "Sally Rooney", quantity: 2}
+      ]);
+    })
+  })
 });

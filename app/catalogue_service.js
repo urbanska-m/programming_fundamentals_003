@@ -12,7 +12,7 @@ const catalogue = [
   { title: "Conversations With Friends", author: "Sally Rooney", quantity: 1},
   { title: "Normal People", author: "Sally Rooney", quantity: 2},
   { title: "Everything I Never Told You", author: "Celeste Ng", quantity: 6},
-  { title: "2666", author: "Robert Bolaño", quantity: 8},
+  { title: "2666", author: "Robert Bolaño", quantity: 17},
   { title: "By Night In Chile", author: "Robert Bolaño", quantity: 8},
   { title: "A Tale of Two Cities", author: "Charles Dickens", quantity: 7},
   { title: "Oliver Twist", author: "Charles Dickens", quantity: 7},
@@ -67,7 +67,11 @@ function getQuantity(title) {
 
 function getBooksByAuthor(author) {
   // Your code here
-}
+  const authorArray = catalogue.filter(function(book) {
+    return book.author === author;
+  })
+return authorArray;
+};
 
 function checkQuantity(title, quantity) {
   // Your code here
