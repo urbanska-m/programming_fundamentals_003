@@ -75,5 +75,9 @@ describe("catalogueService", () => {
     test("return true if there are at least as many books in stock as the given quantity", () => {
       expect(catalogueService.checkQuantity("By Night In Chile", 4)).toBe(true);
     })
+
+    test("return false if there are less books than given number", () => {
+      expect(catalogueService.checkQuantity("The Yellow Wallpaper", 19)).toBe(false);
+    })
   })  
 });
