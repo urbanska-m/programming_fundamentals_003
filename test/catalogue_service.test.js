@@ -47,6 +47,15 @@ describe("catalogueService", () => {
         { title: "Conversations With Friends", author: "Sally Rooney", quantity: 1},
         { title: "Normal People", author: "Sally Rooney", quantity: 2}
       ]);
-    })
+    });
+
+//     test("return array with matching authors given only a first name", () => {
+//       expect(catalogueService.getBooksByAuthor("Charles")).toEqual([
+//         { title: "A Tale of Two Cities", author: "Charles Dickens", quantity: 7},
+//         { title: "Oliver Twist", author: "Charles Dickens", quantity: 7},
+//         { title: "Great Expectations", author: "Charles Dickens", quantity: 1},
+//         { title: "The Origin of Species", author: "Charles Darwin", quantity: 50}
+//       ])
+//     })
   })
 });
