@@ -48,14 +48,16 @@ describe("catalogueService", () => {
         { title: "Normal People", author: "Sally Rooney", quantity: 2}
       ]);
     });
-
-//     test("return array with matching authors given only a first name", () => {
-//       expect(catalogueService.getBooksByAuthor("Charles")).toEqual([
-//         { title: "A Tale of Two Cities", author: "Charles Dickens", quantity: 7},
-//         { title: "Oliver Twist", author: "Charles Dickens", quantity: 7},
-//         { title: "Great Expectations", author: "Charles Dickens", quantity: 1},
-//         { title: "The Origin of Species", author: "Charles Darwin", quantity: 50}
-//       ])
-//     })
+// Want to make it work when only first name is given
+// Currently returns alphabeticised array (author, quantity, title instead of title, author, quantity) AND empty array
+// Why does giving full name not make it alphabeticised?
+    test("return array with matching authors given only a first name", () => {
+      expect(catalogueService.getBooksByAuthor("Charles")).toEqual([
+        { title: "A Tale of Two Cities", author: "Charles Dickens", quantity: 7},
+        { title: "Oliver Twist", author: "Charles Dickens", quantity: 7},
+        { title: "Great Expectations", author: "Charles Dickens", quantity: 1},
+        { title: "The Origin of Species", author: "Charles Darwin", quantity: 50}
+      ]);
+    })
   })
 });

@@ -72,7 +72,7 @@ function getBooksByAuthor(author) {
   })
 return authorArray;
 };
-console.log(getBooksByAuthor("Charles Dickens"));
+console.log(getBooksByAuthor("Charles"));
 
 function checkQuantity(title, quantity) {
   // Your code here
