@@ -62,12 +62,18 @@ describe("catalogueService", () => {
     // })
 
     // Also returns alphabeticised array + empty array.
-    test("return array of author's books given only last name", () => {
-      expect(catalogueService.getBooksByAuthor("Dickens")).toEqual([
-        { title: "A Tale of Two Cities", author: "Charles Dickens", quantity: 7},
-        { title: "Oliver Twist", author: "Charles Dickens", quantity: 7},
-        { title: "Great Expectations", author: "Charles Dickens", quantity: 1}
-      ]);
-    })
+    // test("return array of author's books given only last name", () => {
+    //   expect(catalogueService.getBooksByAuthor("Dickens")).toEqual([
+    //     { title: "A Tale of Two Cities", author: "Charles Dickens", quantity: 7},
+    //     { title: "Oliver Twist", author: "Charles Dickens", quantity: 7},
+    //     { title: "Great Expectations", author: "Charles Dickens", quantity: 1}
+    //   ]);
+    // })
   })
+
+  describe("catalogueService.checkQuantity", () => {
+    test("return true if there are at least as many books in stock as the given quantity", () => {
+      expect(catalogueService.checkQuantity("By Night In Chile", 4)).toBe(true);
+    })
+  })  
 });
